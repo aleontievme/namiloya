@@ -1,0 +1,8 @@
+<tr>
+  <td>
+    <%=trip.name%> 
+    <% schedule.each do |schedule| %>
+      <span class="label label-default"><%=schedule.begin.to_date%></span>
+    <% end %>
+  </td>
+</tr>
