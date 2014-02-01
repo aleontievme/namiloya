@@ -52,7 +52,8 @@ ActiveRecord::Schema.define(version: 20140201080519) do
 
   create_table "schedules", force: true do |t|
     t.integer  "trip_id"
-    t.datetime "date"
+    t.datetime "begin"
+    t.datetime "end"
   end
 
   add_index "schedules", ["trip_id"], name: "index_schedules_on_trip_id"
