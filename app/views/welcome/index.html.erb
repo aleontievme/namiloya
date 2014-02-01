@@ -1,2 +1,32 @@
-<h1>Welcome#index</h1>
-<p>Find me in app/views/welcome/index.html.erb</p>
+<div class="container">
+  <div class="jumbotron">
+
+    <div class="row">
+      <div class="col-md-6">
+        <%= render partial: "adv_slider" %>
+      </div>
+        
+      <div class="col-md-6">   
+        <p>Паломнические поездки из Санкт-Петербурга</p>
+        <%= render partial: "next_trip" %>
+
+        <center>
+          <p>
+            <a class="btn btn-success" href="../../components/#navbar" role="button">График поездок &raquo;</a>
+            <a class="btn btn-primary" href="../../components/#navbar" role="button">Полный список &raquo;</a>
+          </p>
+        </center>
+      </div>
+
+    </div>
+  </div>
+</div> 
+
+<script>
+  // Can also be used with $(document).ready()
+  $(window).load(function() {
+    $('.flexslider').flexslider({
+      animation: "slide"
+    });
+  });
+</script>
