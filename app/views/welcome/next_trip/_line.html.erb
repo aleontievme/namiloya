@@ -1,8 +1,10 @@
 <tr>
   <td>
-    <%=trip.name%> 
+    <a href="/trip/<%=trip.id%>"><%=trip.name%></a>
     <% schedule.each do |schedule| %>
-      <span class="label label-default"><%=schedule.begin.to_date%></span>
+      <a href="/trip/<%=trip.id%>/<%=schedule.begin.to_date%>">
+      	<span class="label label-default"><%=schedule.begin.to_date%></span>
+      </a>
     <% end %>
   </td>
 </tr>
