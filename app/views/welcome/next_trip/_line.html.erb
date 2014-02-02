@@ -1,9 +1,9 @@
 <tr>
   <td>
-    <a href="/trip/<%=trip.id%>"><%=trip.name%></a>
+    <a href="/trip/<%=trip.permalink%>"><%=trip.name%></a>
     <% schedule.each do |schedule| %>
-      <a href="/trip/<%=trip.id%>/<%=schedule.begin.to_date%>">
-      	<span class="label label-default"><%=schedule.begin.to_date%></span>
+      <a href="/trip/<%=trip.permalink%>/<%=schedule.begin.to_date%>">
+      	<%= render partial: "trip/schedule_badge", locals: {date: schedule.begin.to_date} %>&nbsp;
       </a>
     <% end %>
   </td>

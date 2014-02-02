@@ -7,13 +7,13 @@
       </div>
         
       <div class="col-md-6">   
-        <p>Поездки из Санкт-Петербурга</p>
+        <h1><%=@trip.name%></h1>
+        <p><%=@trip.description%></p>
         <%= render partial: "next_trip", object: @next_trip %>
 
         <center>
           <p>
-            <a class="btn btn-success" href="../../components/#navbar" role="button">График поездок &raquo;</a>
-            <a class="btn btn-primary" href="../../components/#navbar" role="button">Полный список &raquo;</a>
+            <a class="btn btn-success" href="../../components/#navbar" role="button">Забронировать &raquo;</a>
           </p>
         </center>
       </div>

@@ -1,5 +1,8 @@
 Namiloya::Application.routes.draw do
+  get "trip/show"
   root "welcome#index"
+  get "trip/:permalink" => "trip#show"
+  get "trip/:permalink/:date" => "trip#show"
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   # The priority is based upon order of creation: first created -> highest priority.
