@@ -2,7 +2,7 @@ class TripController < ApplicationController
   def show
   	permalink = params[:permalink]
   	date      = params[:date]
-  	@date     = date
+  	@date     = date.nil? ? DateTime.now : date
 
   	if date.nil?
   		@trip = Trip.find_by(permalink: permalink)
