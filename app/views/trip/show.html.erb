@@ -10,16 +10,21 @@
         <h1><%=@trip.name%></h1>
         <p><%=@trip.description%></p>
         <%= render partial: "next_trip", object: @next_trip %>
-
-        <center>
-          <p>
-            <a class="btn btn-success" href="../../components/#navbar" role="button">Забронировать &raquo;</a>
-          </p>
-        </center>
       </div>
 
     </div>
+
+    <center>
+      <a class="btn btn-lg btn-info" href="../../components/#navbar" role="button">Забронировать на <%=@date%></a>
+    </center>
+
   </div>
+  <p>
+    <%= @trip.description %>
+  </p> 
+  <center>
+    <a class="btn btn-lg btn-info" href="../../components/#navbar" role="button">Забронировать на <%=@date%></a>
+  </center>
 </div> 
 
 <script>

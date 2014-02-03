@@ -1,0 +1,8 @@
+<div class="container">
+  <table class="table table-hover">
+    <% @schedule.each do |category, schedules| %>
+      <%=render partial:"category", object:category%>
+      <%=render partial:"trips", object:schedules%>
+    <% end %>
+  </table>
+</div>

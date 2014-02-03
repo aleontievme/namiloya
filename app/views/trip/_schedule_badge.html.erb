@@ -1,7 +1,9 @@
 <% style = 'default' if local_assigns[:style].nil? %>
 <% style = 'success' if local_assigns[:highlight] == true %>
 
-<span class="label label-<%=style%>">
-   <span class="glyphicon glyphicon-calendar"></span>
-   <%=date.strftime("%d %b")%>
-</span>
+<a class="schedule_label" href="/trip/<%=schedule.trip.permalink%>/<%=schedule.begin.to_date%>">
+	<span class="label label-<%=style%>">
+	   <span class="glyphicon glyphicon-calendar"></span>
+	   <%=schedule.begin.to_date.strftime("%d %b")%>
+	</span>
+</a>

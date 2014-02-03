@@ -1,6 +1,6 @@
-class WelcomeController < ApplicationController
-  def index
-    @next_trip = Schedule
+class ScheduleController < ApplicationController
+  def show
+    @schedule = Schedule
       .includes{trip.category}
       .order{trip.id}
       .order{trip.category.id}
