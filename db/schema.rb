@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140202063612) do
+ActiveRecord::Schema.define(version: 20140204153845) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -50,10 +50,20 @@ ActiveRecord::Schema.define(version: 20140202063612) do
     t.string "name"
   end
 
+  create_table "orders", force: true do |t|
+    t.integer "schedule_id"
+    t.integer "quantity"
+    t.text    "comment"
+  end
+
+  add_index "orders", ["schedule_id"], name: "index_orders_on_schedule_id"
+
   create_table "schedules", force: true do |t|
-    t.integer  "trip_id"
-    t.datetime "begin"
-    t.datetime "end"
+    t.integer "trip_id"
+    t.date    "begin_date"
+    t.date    "end_date"
+    t.time    "begin_time"
+    t.time    "end_time"
   end
 
   add_index "schedules", ["trip_id"], name: "index_schedules_on_trip_id"

@@ -1,9 +1,16 @@
 Namiloya::Application.routes.draw do
+  get "order/:id" => "order#show", as: :order
+  get "order/new"
+  get "order/create"
   get "schedule/show"
   get "trip/show"
   root "welcome#index"
   get "trip/:permalink" => "trip#show"
   get "trip/:permalink/:date" => "trip#show"
+  get "order/:permalink/:date" => "order#new"
+  post "order/:permalink/:date" => "order#create",  as: :orders
+
+
   get "schedule" => "schedule#show"
 
   devise_for :admin_users, ActiveAdmin::Devise.config

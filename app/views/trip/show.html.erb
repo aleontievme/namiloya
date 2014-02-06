@@ -15,7 +15,7 @@
     </div>
 
     <center>
-      <a class="btn btn-lg btn-info" href="../../components/#navbar" role="button">Забронировать на <%=@date%></a>
+      <a class="btn btn-lg btn-info" href="/order/<%=@trip.permalink%>/<%=@date%>" role="button">Забронировать на <%=@date%></a>
     </center>
 
   </div>
@@ -23,7 +23,7 @@
     <%= @trip.description %>
   </p> 
   <center>
-    <a class="btn btn-lg btn-info" href="../../components/#navbar" role="button">Забронировать на <%=@date%></a>
+    <a class="btn btn-lg btn-info" href="/order/<%=@trip.permalink%>/<%=@date%>" role="button">Забронировать на <%=@date%></a>
   </center>
 </div> 
 

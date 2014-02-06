@@ -8,7 +8,7 @@ class TripController < ApplicationController
   		@trip = Trip.find_by(permalink: permalink)
   	else
   		@trip     = Trip.find_by(permalink: permalink)
-  		@schedule = Schedule.find_by(trip_id: @trip.id, begin: date)
+  		@schedule = Schedule.find_by(trip_id: @trip.id, begin_date: date)
   	end
 
   	@next_trip = Schedule

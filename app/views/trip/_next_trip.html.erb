@@ -1,6 +1,6 @@
 <p>Ближайшие поездки:
   <% next_trip.each do |schedule| %>
-    <%= render partial: "trip/schedule_badge", locals: {schedule:schedule, highlight:schedule.begin.to_date.to_s == @date.to_date.to_s} %>
+    <%= render partial: "trip/schedule_badge", locals: {schedule:schedule, highlight:schedule.begin_date == @date.to_date} %>
     &nbsp;
   <% end %>
 </p>
