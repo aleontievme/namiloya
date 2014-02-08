@@ -1,5 +1,5 @@
 Namiloya::Application.routes.draw do
-  get "order/:id" => "order#show", as: :order
+  get "order/:permalink" => "order#show", as: :order
   get "order/new"
   get "order/create"
   get "schedule/show"

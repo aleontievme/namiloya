@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140208082606) do
+ActiveRecord::Schema.define(version: 20140208083601) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -56,6 +56,7 @@ ActiveRecord::Schema.define(version: 20140208082606) do
     t.text    "comment"
     t.string  "phone"
     t.string  "email"
+    t.string  "permalink"
   end
 
   add_index "orders", ["schedule_id"], name: "index_orders_on_schedule_id"
