@@ -34,6 +34,7 @@ end
 
 gem 'activeadmin', github: 'gregbell/active_admin'
 gem 'squeel'
+gem 'bootstrap_form'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
