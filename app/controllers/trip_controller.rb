@@ -1,17 +1,24 @@
 class TripController < ApplicationController
   def show
-  	permalink = params[:permalink]
-  	date      = params[:date]
-  	@date     = date.nil? ? DateTime.now : date
+    # find trip
+    permalink = params[:permalink]
+    trip      = Trip.find_by(permalink: permalink)
+    
+    # find schedule
+    date      = params[:date] || nearest_schedule_date(trip)
+    schedule  = Schedule.find_by(trip_id: trip.id, begin_date: date)
+    
+    # next trip
+    next_trip = Schedule.next(trip.id)
 
-  	if date.nil?
-  		@trip = Trip.find_by(permalink: permalink)
-  	else
-  		@trip     = Trip.find_by(permalink: permalink)
-  		@schedule = Schedule.find_by(trip_id: @trip.id, begin_date: date)
-  	end
+    # export
+    @trip, @date, @schedule, @next_trip = trip, date, schedule, next_trip
+  end
 
-  	@next_trip = Schedule
-    	.where{trip_id.eq 1}
+  private
+
+  def nearest_schedule_date(trip)
+    schedule = Schedule.next(trip)
+    schedule.first.begin_date
   end
 end
