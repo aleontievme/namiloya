@@ -1,0 +1,10 @@
+en:
+  menu:
+    head: "Namiloya"
+    home: "Главная"
+    schedule: "График поездок"
+    about: "О нас"
+  schedule:
+    all: "График всех поездок"
+  order:
+    created: "Заказ оформлен"
