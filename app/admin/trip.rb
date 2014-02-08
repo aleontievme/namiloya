@@ -1,5 +1,5 @@
 ActiveAdmin.register Trip do
-  permit_params :name, :description, :category_id, :permalink, :introduction
+  permit_params :name, :description, :category_id, :permalink, :introduction, :cost
 
   def to_param
     permalink

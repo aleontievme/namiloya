@@ -6,5 +6,7 @@ en:
     about: "About"
   schedule:
     all: "All schedule"
+    next: "Next trips"
   order:
     created: "Order created"
+    cost: "Trip cost: "

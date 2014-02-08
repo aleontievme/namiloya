@@ -1,6 +1,9 @@
-<p>Ближайшие поездки:
-  <% next_trip.each do |schedule| %>
-    <%= render partial: "trip/schedule_badge", locals: {schedule:schedule, highlight:schedule.begin_date == @date.to_date} %>
-    &nbsp;
-  <% end %>
-</p>
+<div class="panel panel-default">
+  <div class="panel-heading"><%=t "schedule.next"%></div>
+  <div class="panel-body">
+  	<p><% next_trip.each do |schedule| %>
+	  <%= render partial: "trip/schedule_badge", locals: {schedule:schedule, highlight:schedule.begin_date == @date.to_date} %>
+	  &nbsp;
+	<% end %></p>
+  </div>
+</div>

@@ -2,21 +2,26 @@
   <div class="jumbotron">
 
     <div class="row">
+      <h1><%=@trip.name%></h1>
+
       <div class="col-md-6">
         <%= render partial: "adv_slider" %>
       </div>
         
       <div class="col-md-6">   
-        <h1><%=@trip.name%></h1>
         <p><%=@trip.introduction%></p>
+        <p><%=t("order.cost")%><b><%= @trip.cost %></b></p>
+
         <%= render partial: "next_trip", object: @next_trip %>
       </div>
 
+      <center>
+        <a class="btn btn-lg btn-info" href="/order/<%=@trip.permalink%>/<%=@date%>" role="button">
+          Забронировать
+        </a>
+      </center>
     </div>
 
-    <center>
-      <a class="btn btn-lg btn-info" href="/order/<%=@trip.permalink%>/<%=@date%>" role="button">Забронировать на <%=@date%></a>
-    </center>
 
   </div>
   <p>
