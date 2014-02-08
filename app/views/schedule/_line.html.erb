@@ -1,10 +1,9 @@
-<tr>
-  <td>
-    <a href="/trip/<%=trip.permalink%>"><%=trip.name%></a>
-    <% schedule.each do |schedule| %>
-      <a href="/trip/<%=trip.permalink%>/<%=schedule.begin_date%>">
-      	<%= render partial: "trip/schedule_badge", locals: {schedule: schedule} %>&nbsp;
-      </a>
-    <% end %>
-  </td>
-</tr>
+<li class="list-group-item">
+  <a href="/trip/<%=trip.permalink%>"><%=trip.name%></a>&nbsp;
+  <% schedule.each do |schedule| %>
+    <a href="/trip/<%=trip.permalink%>/<%=schedule.begin_date%>">
+      <%= render partial: "trip/schedule_badge", locals: {schedule: schedule} %>&nbsp;
+    </a>
+  <% end %>
+  <span class="badge"><%=trip.cost%></span>
+</li>
