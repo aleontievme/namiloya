@@ -17,7 +17,7 @@
 
       <center>
         <a class="btn btn-lg btn-info" href="/order/<%=@trip.permalink%>/<%=@date%>" role="button">
-          Забронировать
+          <%=t("order.new")%>
         </a>
       </center>
     </div>
@@ -28,7 +28,7 @@
     <%= @trip.description %>
   </p> 
   <center>
-    <a class="btn btn-lg btn-info" href="/order/<%=@trip.permalink%>/<%=@date%>" role="button">Забронировать на <%=@date%></a>
+    <a class="btn btn-lg btn-info" href="/order/<%=@trip.permalink%>/<%=@date%>" role="button"><%=t("order.new")%></a>
   </center>
 </div> 
 

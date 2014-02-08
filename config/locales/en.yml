@@ -10,5 +10,6 @@ en:
     all: "All schedule"
     next: "Next trips"
   order:
+    new: "Order"
     created: "Order created"
     cost: "Trip cost: "
