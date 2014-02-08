@@ -1,4 +1,6 @@
 Namiloya::Application.routes.draw do
+  get "about/index"
+  get "about" => "about#index"
   get "order/:permalink" => "order#show", as: :order
   get "order/new"
   get "order/create"
