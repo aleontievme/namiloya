@@ -2,12 +2,13 @@
   <div class="jumbotron">
 
     <div class="row">
+      <h1><%=t("project.welcome")%></h1>
+
       <div class="col-md-6">
         <%= render partial: "adv_slider" %>
       </div>
         
       <div class="col-md-6">   
-        <p>Поездки из Санкт-Петербурга</p>
         <%= render partial: "next_trip", object: @next_trip %>
 
         <center>

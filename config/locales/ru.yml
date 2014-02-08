@@ -1,4 +1,6 @@
-en:
+ru:
+  project:
+    welcome: "Namiloya"
   menu:
     head: "Namiloya"
     home: "Главная"

@@ -1,4 +1,6 @@
 en:
+  project:
+    welcome: "Namiloya"
   menu:
     head: "Namiloya"
     home: "Home"
