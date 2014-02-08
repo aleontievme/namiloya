@@ -1,7 +1,6 @@
-<table class="table table-condensed table-hover">
+<ul class="list-group">
   <% next_trip.each do |category, schedules| %>
-    <%-# category -%>
     <%=render partial:"welcome/next_trip/category", object:category%>
     <%=render partial:"welcome/next_trip/trips", object:schedules%>
   <% end %>
-</table>   
+</ul>   
