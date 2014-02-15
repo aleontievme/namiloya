@@ -15,6 +15,7 @@
 //= require bootstrap.min
 //= require jquery.flexslider-min
 //= require turbolinks
+//= require holder
 //= require_tree .
 
 function run_slider() {
