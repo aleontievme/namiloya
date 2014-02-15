@@ -9,12 +9,13 @@ body {
 
 .container .jumbotron {
   padding: 32px;
-  padding-top: 0px;
-  padding-bottom: 0px;
+  //padding-top: 0px;
+  //padding-bottom: 0px;
 }
 
 .container .jumbotron h1 {
   margin-bottom: 30px;
+  margin-top: 0px;
 }
 
 a.schedule_label:hover {

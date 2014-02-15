@@ -15,17 +15,15 @@
     </div>
 
     <center>
-      <a class="btn btn-lg btn-info" href="/order/<%=@trip.permalink%>/<%=@date%>" role="button">
-        <%=t("order.new")%>
-      </a>
+      <%= link_to t("order.new"), new_order_path(@trip, @date), :class=>"btn btn-lg btn-info" %>
     </center>
   </div>
-
-
 </div>
+
 <p>
   <%= @trip.description %>
 </p> 
+    
 <center>
-  <a class="btn btn-lg btn-info" href="/order/<%=@trip.permalink%>/<%=@date%>" role="button"><%=t("order.new")%></a>
+  <%= link_to t("order.new"), new_order_path(@trip, @date), :class=>"btn btn-lg btn-info" %>
 </center>

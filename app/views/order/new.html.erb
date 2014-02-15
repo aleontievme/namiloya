@@ -1,4 +1,4 @@
 <h1><%=t("order.new")%></h1>
-<p><%=@trip.name %>. <%=@schedule.begin_date%>.</p>
+<p><%=@trip.name %>. <%=l @schedule.begin_date, format: :long%>.</p>
 
 <%= render 'form' %>

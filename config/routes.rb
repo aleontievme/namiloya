@@ -1,16 +1,18 @@
 Namiloya::Application.routes.draw do
-  get "about/index"
-  get "about" => "about#index"
-  get "order/:permalink" => "order#show", as: :order
-  get "order/new"
-  get "order/create"
-  get "schedule/show"
-  get "trip/show"
-  root "welcome#index"
-  get "trip/:permalink" => "trip#show"
-  get "trip/:permalink/:date" => "trip#show"
-  get "order/:permalink/:date" => "order#new"
-  post "order/:permalink/:date" => "order#create",  as: :orders
+  scope "(:locale)", :locale => /en|ru/ do
+    get "about/index"
+    get "about" => "about#index"
+    get "order/:permalink" => "order#show", as: :order
+    get "order/new"
+    get "order/create"
+    get "schedule" => "schedule#show", as: :schedules
+    get "trip/:permalink" => "trip#show", as: :trip
+    root "welcome#index"
+    get "trip/:permalink" => "trip#show"
+    get "trip/:permalink/:date" => "trip#show", as: :schedule
+    get "order/:permalink/:date" => "order#new", as: :new_order
+    post "order/:permalink/:date" => "order#create",  as: :orders
+  end
 
 
   get "schedule" => "schedule#show"

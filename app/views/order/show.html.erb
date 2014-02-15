@@ -1,3 +1,3 @@
 <h1><%=t "order.created"%></h1>
 <p><%=@order.schedule.trip.name%></p>
-<p><%=@order.schedule.begin_date%></p>
+<p><%=l @order.schedule.begin_date, format: :long%></p>

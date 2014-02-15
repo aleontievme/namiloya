@@ -1,6 +1,6 @@
 ru:
   project:
-    welcome: "Namiloya - движек для турестических агентств"
+    welcome: "Namiloya - сайт для турестических агентств"
     about: >
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi elementum sodales ipsum et molestie.
       Nulla cursus fermentum elit, sed egestas libero tincidunt eu. Vivamus tempus feugiat velit, id posuere
@@ -19,3 +19,8 @@ ru:
     new: "Забронировать"
     created: "Заказ оформлен"
     cost: "Стоимость поездки: "
+    phone: "Телефон"
+    quantity: "Количество"
+    email: "EMail"
+    comment: "Комментарий"
+    comment_placeholder: "Укажите пожелания"

@@ -1,9 +1,7 @@
 <li class="list-group-item">
-  <a href="/trip/<%=trip.permalink%>"><%=trip.name%></a>&nbsp;
+  <%=link_to trip.name, trip %>&nbsp;
   <% schedule.each do |schedule| %>
-    <a href="/trip/<%=trip.permalink%>/<%=schedule.begin_date%>">
-      <%= render partial: "trip/schedule_badge", locals: {schedule: schedule} %>&nbsp;
-    </a>
+    <%= render partial: "trip/schedule_badge", locals: {schedule: schedule} %>&nbsp;
   <% end %>
   <span class="badge"><%=trip.cost%></span>
 </li>

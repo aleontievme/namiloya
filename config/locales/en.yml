@@ -19,3 +19,8 @@ en:
     new: "Order"
     created: "Order created"
     cost: "Trip cost: "
+    phone: "Phone"
+    quantity: "Quantity"
+    email: "EMail"
+    comment: "Comment"
+    comment_placeholder: "Write some comment here"

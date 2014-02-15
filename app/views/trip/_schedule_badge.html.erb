@@ -1,9 +1,9 @@
 <% style = 'default' if local_assigns[:style].nil? %>
 <% style = 'success' if local_assigns[:highlight] == true %>
 
-<a class="schedule_label" href="/trip/<%=schedule.trip.permalink%>/<%=schedule.begin_date%>">
-	<span class="label label-<%=style%>">
-	   <span class="glyphicon glyphicon-calendar"></span>
-	   <%=schedule.begin_date.strftime("%d %b")%>
-	</span>
-</a>
+<%= link_to schedule_path(schedule.trip.permalink, schedule.begin_date), :class=>"schedule_label" do %>
+  <span class="label label-<%=style%>">
+    <span class="glyphicon glyphicon-calendar"></span>
+    <%=l schedule.begin_date, :format => :short%>
+  </span>
+<% end %>
