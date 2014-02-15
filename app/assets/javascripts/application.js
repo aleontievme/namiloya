@@ -16,3 +16,12 @@
 //= require jquery.flexslider-min
 //= require turbolinks
 //= require_tree .
+
+function run_slider() {
+  $('.flexslider').flexslider({
+  	animation: "slide"
+  });
+}
+
+$(document).ready(run_slider);
+$(document).on('page:load', run_slider);
