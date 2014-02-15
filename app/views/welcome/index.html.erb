@@ -1,23 +1,26 @@
-<div class="container">
-  <div class="jumbotron">
+<div class="jumbotron">
 
-    <div class="row">
-      <h1><%=t("project.welcome")%></h1>
+  <div class="row">
+    <h1><%=t("project.welcome")%></h1>
 
-      <div class="col-md-6">
-        <%= render partial: "adv_slider" %>
-      </div>
-        
-      <div class="col-md-6">   
-        <%= render partial: "next_trip", object: @next_trip %>
-
-        <center>
-          <p>
-            <a class="btn btn-success" href="/schedule" role="button"><%=t "schedule.all"%> &raquo;</a>
-          </p>
-        </center>
-      </div>
-
+    <div class="col-md-6">
+      <%= render partial: "adv_slider" %>
     </div>
+      
+    <div class="col-md-6">   
+      <%= render partial: "next_trip", object: @next_trip %>
+
+      <center>
+        <p>
+          <a class="btn btn-success" href="/schedule" role="button"><%=t "schedule.all"%> &raquo;</a>
+        </p>
+      </center>
+    </div>
+
   </div>
+</div>
+
+<div>
+  <h2><%=t "menu.about"%></h2>
+  <p><%=t "project.about"%></p>
 </div>

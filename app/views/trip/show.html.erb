@@ -1,33 +1,31 @@
-<div class="container">
-  <div class="jumbotron">
+<div class="jumbotron">
 
-    <div class="row">
-      <h1><%=@trip.name%></h1>
+  <div class="row">
+    <h1><%=@trip.name%></h1>
 
-      <div class="col-md-6">
-        <%= render partial: "adv_slider" %>
-      </div>
-        
-      <div class="col-md-6">   
-        <p><%=@trip.introduction%></p>
-        <p><%=t("order.cost")%><b><%= @trip.cost %></b></p>
+    <div class="col-md-6">
+      <%= render partial: "adv_slider" %>
+    </div>
+      
+    <div class="col-md-6">   
+      <p><%=@trip.introduction%></p>
+      <p><%=t("order.cost")%><b><%= @trip.cost %></b></p>
 
-        <%= render partial: "next_trip", object: @next_trip %>
-      </div>
-
-      <center>
-        <a class="btn btn-lg btn-info" href="/order/<%=@trip.permalink%>/<%=@date%>" role="button">
-          <%=t("order.new")%>
-        </a>
-      </center>
+      <%= render partial: "next_trip", object: @next_trip %>
     </div>
 
-
+    <center>
+      <a class="btn btn-lg btn-info" href="/order/<%=@trip.permalink%>/<%=@date%>" role="button">
+        <%=t("order.new")%>
+      </a>
+    </center>
   </div>
-  <p>
-    <%= @trip.description %>
-  </p> 
-  <center>
-    <a class="btn btn-lg btn-info" href="/order/<%=@trip.permalink%>/<%=@date%>" role="button"><%=t("order.new")%></a>
-  </center>
+
+
 </div>
+<p>
+  <%= @trip.description %>
+</p> 
+<center>
+  <a class="btn btn-lg btn-info" href="/order/<%=@trip.permalink%>/<%=@date%>" role="button"><%=t("order.new")%></a>
+</center>

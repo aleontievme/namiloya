@@ -1,6 +1,12 @@
 ru:
   project:
-    welcome: "Namiloya"
+    welcome: "Namiloya - движек для турестических агентств"
+    about: >
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi elementum sodales ipsum et molestie.
+      Nulla cursus fermentum elit, sed egestas libero tincidunt eu. Vivamus tempus feugiat velit, id posuere
+      purus laoreet vitae. Vestibulum ac adipiscing enim. Maecenas dignissim eleifend turpis vitae venenatis.
+      Morbi venenatis luctus iaculis. Etiam vitae turpis vitae urna mattis rhoncus nec a metus. Cras mattis
+      pretium consectetur. Nunc in consequat lorem.
   menu:
     head: "Namiloya"
     home: "Главная"
