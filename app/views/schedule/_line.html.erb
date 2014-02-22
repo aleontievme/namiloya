@@ -1,7 +1,13 @@
-<li class="list-group-item">
-  <%=link_to trip.name, trip %>&nbsp;
-  <% schedule.each do |schedule| %>
-    <%= render partial: "trip/schedule_badge", locals: {schedule: schedule} %>&nbsp;
+<tr>
+  <td><%=link_to trip.name, trip %>&nbsp;</td>
+  <% for i in 1..12%>
+    <td>
+      <% schedule.each do |schedule| %>
+        <% if schedule.begin_date.month == i then %>
+          <%= render partial: "trip/schedule_badge", locals: {schedule: schedule} %>&nbsp;
+        <% end %>
+      <% end %>
+    </td>
   <% end %>
-  <span class="badge"><%=trip.cost%></span>
-</li>
+  <td><span class="badge"><%=trip.cost%></span></td>
+</tr>

@@ -1,6 +1,6 @@
-<ul class="list-group">
+<table class="table table-striped table-hover">
   <% @schedule.each do |category, schedules| %>
     <%=render partial:"category", object:category%>
     <%=render partial:"trips", object:schedules%>
   <% end %>
-</ul>
+</table>

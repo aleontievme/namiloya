@@ -2,7 +2,7 @@ class WelcomeController < ApplicationController
   def index
     @next_trip = Schedule
       .includes{trip.category}
-      .where{begin_date >= DateTime.now}
+      .where{(begin_date >= DateTime.now) & (end_date <= DateTime.now + 31)}
       .order{begin_date}
       .order{trip.id}
       .order{trip.category.id}

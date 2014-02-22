@@ -8,7 +8,7 @@
     </div>
       
     <div class="col-md-6">   
-      <p><%=@trip.introduction%></p>
+      <p><%=@trip.introduction.html_safe%></p>
       <p><%=t("order.cost")%><b><%= @trip.cost %></b></p>
 
       <%= render partial: "next_trip", object: @next_trip %>
@@ -21,7 +21,7 @@
 </div>
 
 <p>
-  <%= @trip.description %>
+  <%= @trip.description.html_safe %>
 </p> 
     
 <center>
