@@ -1,6 +1,7 @@
 # encoding: utf-8
+include CarrierWave::RMagick
 
-class TripPhotoUploader < CarrierWave::Uploader::Base
+class PhotoUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
@@ -33,7 +34,7 @@ class TripPhotoUploader < CarrierWave::Uploader::Base
 
   # Create different versions of your uploaded files:
   version :thumb do
-     process :scale => [400, 400]
+    process :resize_to_fit => [400, 1000]
   end
 
   # Add a white list of extensions which are allowed to be uploaded.

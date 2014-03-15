@@ -11,8 +11,11 @@ class TripController < ApplicationController
     # next trip
     next_trip = Schedule.next(trip.id)
 
+    # photos
+    photos = trip.photos
+
     # export
-    @trip, @date, @schedule, @next_trip = trip, date, schedule, next_trip
+    @trip, @date, @schedule, @next_trip, @photos = trip, date, schedule, next_trip, photos
   end
 
   private

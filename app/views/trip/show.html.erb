@@ -4,7 +4,7 @@
     <h1><%=@trip.name%></h1>
 
     <div class="col-md-6">
-      <%= render partial: "adv_slider" %>
+      <%= render partial: "adv_slider", :locals => { :photos => @photos } %>
     </div>
       
     <div class="col-md-6">   

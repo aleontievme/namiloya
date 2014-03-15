@@ -1,8 +1,7 @@
 <div class="flexslider">
   <ul class="slides">
-    <li><center><img src="holder.js/400x400"></center><br/></li>
-    <li><center><img src="holder.js/400x400"></center><br/></li>
-    <li><center><img src="holder.js/400x400"></center><br/></li>
-    <li><center><img src="holder.js/400x400"></center><br/></li>
+    <% for photo in photos %>
+      <li><center><img src="<%=photo.url_url(:thumb)%>"></center><br/></li>
+    <% end %>
   </ul>
 </div>
