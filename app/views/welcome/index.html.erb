@@ -3,19 +3,25 @@
   <div class="row">
     <h1><%=t("project.welcome")%></h1>
 
-    <div class="col-md-6">
-      <%= render partial: "adv_slider" %>
-    </div>
-      
-    <div class="col-md-6">   
+    <% if @trip_photos.length > 0 %>
+      <div class="col-md-6">
+        <%= render partial: "adv_slider", :locals => { trip_photos: @trip_photos } %>
+      </div>
+  
+      <div class="col-md-6">   
+        <%= render partial: "next_trip", object: @next_trip %>
+
+        <center><p>
+          <a class="btn btn-success" href="/schedule" role="button"><%=t "schedule.all"%> &raquo;</a>
+        </p></center>
+      </div>
+    <% else %>
       <%= render partial: "next_trip", object: @next_trip %>
 
-      <center>
-        <p>
-          <a class="btn btn-success" href="/schedule" role="button"><%=t "schedule.all"%> &raquo;</a>
-        </p>
-      </center>
-    </div>
+      <center><p>
+        <a class="btn btn-success" href="/schedule" role="button"><%=t "schedule.all"%> &raquo;</a>
+      </p></center>
+    <% end %>
 
   </div>
 </div>

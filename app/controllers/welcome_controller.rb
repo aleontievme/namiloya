@@ -7,5 +7,6 @@ class WelcomeController < ApplicationController
       .order{trip.id}
       .order{trip.category.id}
       .group_by{|x| x.trip.category}
+    @trip_photos = TripPhoto.all.sample(5)
   end
 end

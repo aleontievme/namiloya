@@ -3,16 +3,22 @@
   <div class="row">
     <h1><%=@trip.name%></h1>
 
-    <div class="col-md-6">
-      <%= render partial: "adv_slider", :locals => { :photos => @photos } %>
-    </div>
+    <% if @photos.size > 0 then %>
+      <div class="col-md-6">
+        <%= render partial: "adv_slider", :locals => { :photos => @photos } %>
+      </div>
       
-    <div class="col-md-6">   
+      <div class="col-md-6">   
+        <p><%=@trip.introduction.html_safe%></p>
+        <p><%=t("order.cost")%><b><%= @trip.cost %></b></p>
+
+        <%= render partial: "next_trip", object: @next_trip %>
+      </div>
+    <% else %>
       <p><%=@trip.introduction.html_safe%></p>
       <p><%=t("order.cost")%><b><%= @trip.cost %></b></p>
-
       <%= render partial: "next_trip", object: @next_trip %>
-    </div>
+    <% end %>
 
     <center>
       <%= link_to t("order.new"), new_order_path(@trip, @date), :class=>"btn btn-lg btn-info" %>
