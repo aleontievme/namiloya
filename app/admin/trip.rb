@@ -13,8 +13,8 @@ ActiveAdmin.register Trip do
     f.inputs "Trip" do
       f.input :name, :label => "Name"
       f.input :permalink, :label => "Permalink"
-      f.input :introduction, :label => "Introduction"
-      f.input :description, :label => "Description"
+      f.input :introduction, :label => "Introduction", as: :html_editor
+      f.input :description, :label => "Description", as: :html_editor
       f.input :cost, :label => "Cost"
       
       f.has_many :trip_photos, :allow_destroy => true, :heading => 'Photos' do |s|
