@@ -18,8 +18,8 @@ class OrderController < ApplicationController
   end
 
   def show
-    operm     = params[:permalink]
-    @order    = Order.includes{schedule}.where{(permalink.eq operm) & (schedule.begin_date > DateTime.now - 365)}.first
+    operm  = params[:permalink]
+    @order = Order.includes{schedule}.where{(permalink.eq operm) & (schedule.begin_date > DateTime.now - 365)}.first
   end
 
   private

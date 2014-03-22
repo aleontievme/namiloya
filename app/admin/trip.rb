@@ -15,6 +15,7 @@ ActiveAdmin.register Trip do
       f.input :permalink, :label => "Permalink"
       f.input :introduction, :label => "Introduction", as: :html_editor
       f.input :description, :label => "Description", as: :html_editor
+      f.input :order_num, :label => "Order"
       f.input :cost, :label => "Cost"
       
       f.has_many :trip_photos, :allow_destroy => true, :heading => 'Photos' do |s|
