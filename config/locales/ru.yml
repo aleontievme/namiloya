@@ -24,3 +24,7 @@ ru:
     email: "EMail"
     comment: "Комментарий"
     comment_placeholder: "Укажите пожелания"
+  sections:
+    one_day: "Ближайшие однодневные поездки"
+    many_day: "Ближайшие многодневные поездки"
+    foreign: "Поездки за границу"

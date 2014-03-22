@@ -24,3 +24,7 @@ en:
     email: "EMail"
     comment: "Comment"
     comment_placeholder: "Write some comment here"
+  sections:
+    one_day: "Nearest one day trips"
+    many_day: "Nearest many day trips"
+    foreign: "Nearest foreign trips"
