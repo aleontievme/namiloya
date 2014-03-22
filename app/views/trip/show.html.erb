@@ -10,13 +10,17 @@
       
       <div class="col-md-6">   
         <p><%=@trip.introduction.html_safe%></p>
-        <p><%=t("order.cost")%><b><%= @trip.cost %></b></p>
+        <% if not @trip.cost.nil? %>
+          <p><%=t("order.cost")%><b><%= @trip.cost %></b></p>
+        <% end %>
 
         <%= render partial: "next_trip", object: @next_trip %>
       </div>
     <% else %>
       <p><%=@trip.introduction.html_safe%></p>
-      <p><%=t("order.cost")%><b><%= @trip.cost %></b></p>
+      <% if not @trip.cost.nil? %>
+        <p><%=t("order.cost")%><b><%= @trip.cost %></b></p>
+      <% end %>
       <%= render partial: "next_trip", object: @next_trip %>
     <% end %>
 
