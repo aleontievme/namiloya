@@ -39,7 +39,6 @@ gem 'russian'
 gem 'active_admin_editor'
 gem 'carrierwave'
 gem 'rmagick'
-gem 'active_admin_editor'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'

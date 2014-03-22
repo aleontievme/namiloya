@@ -1,4 +1,4 @@
-<li class="list-group-item">
+<li class="list-group-item list-group-item-considered">
   <%=link_to trip.name, trip %>&nbsp;
   <% schedule.each do |schedule| %>
     <%= render partial: "trip/schedule_badge", locals: {schedule: schedule} %>&nbsp;
