@@ -19,6 +19,7 @@ ru:
     new: "Забронировать"
     created: "Заказ оформлен"
     cost: "Стоимость поездки: "
+    name: "Имя"
     phone: "Телефон"
     quantity: "Количество"
     email: "EMail"
@@ -28,3 +29,7 @@ ru:
     one_day: "Ближайшие однодневные поездки"
     many_day: "Ближайшие многодневные поездки"
     foreign: "Поездки за границу"
+  date:
+    formats:
+      badge_day_month: "%-d %b"
+      badge_day: "%-d"

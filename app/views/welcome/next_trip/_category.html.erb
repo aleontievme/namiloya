@@ -1,3 +1,5 @@
+<% category = 'none' if local_assigns[:category].nil? %>
+
 <li class="list-group-item list-group-item-info list-group-item-considered">
   <%=t ("sections." + category)%>
 </li>

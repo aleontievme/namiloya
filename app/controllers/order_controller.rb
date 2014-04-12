@@ -25,6 +25,6 @@ class OrderController < ApplicationController
   private
 
   def order_params
-    params.require(:order).permit(:schedule_id, :quantity, :comment, :phone, :email)
+    params.require(:order).permit(:schedule_id, :quantity, :comment, :phone, :email, :name)
   end
 end

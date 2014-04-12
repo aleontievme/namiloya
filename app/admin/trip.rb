@@ -9,6 +9,18 @@ ActiveAdmin.register Trip do
     end
   end
 
+  index do
+    column :name
+    column :category
+    column :cost
+    default_actions
+  end
+
+  filter :name
+  filter :introduction
+  filter :description
+  filter :cost
+
   form do |f|
     f.inputs "Trip" do
       f.input :name, :label => "Name"

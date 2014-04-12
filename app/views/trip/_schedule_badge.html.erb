@@ -4,6 +4,20 @@
 <%= link_to schedule_path(schedule.trip.permalink, schedule.begin_date), :class=>"schedule_label" do %>
   <span class="label label-<%=style%>">
     <span class="glyphicon glyphicon-calendar"></span>
-    <%=l schedule.begin_date, :format => :short%>
+
+    <% if schedule.end_date.month != schedule.begin_date.month %>
+      <%# trip ends in next month %>
+      <%=l schedule.begin_date, :format => :badge_day_month %> - 
+      <%=l schedule.end_date, :format => :badge_day_month %>
+    <% elsif schedule.end_date.day > schedule.begin_date.day %>
+      <%# trip ends in month it begin %>
+      <%=l schedule.begin_date, :format => :badge_day %> - 
+      <%=l schedule.end_date, :format => :badge_day_month %>
+    <% else %>
+      <%# oneday trip %>
+      <%=l schedule.begin_date, :format => :badge_day_month %>
+    <% end %>
+
+
   </span>
 <% end %>

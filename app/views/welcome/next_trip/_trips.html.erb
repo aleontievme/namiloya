@@ -1,4 +1,5 @@
-<%-# list of trpis and schedules for specified category -%>
-<% trips.group_by{|x| x.trip}.each do |trip, schedule| %>
-  <%=render partial:"welcome/next_trip/line", locals: { trip: trip, schedule: schedule } %>
+<% trips.group_by{|x| x.trip}.each_with_index do |(trip, schedule), index| %>
+  <% if index < 5 %>
+    <%=render partial:"welcome/next_trip/line", locals: { trip: trip, schedule: schedule } %>
+  <% end %>
 <% end %>

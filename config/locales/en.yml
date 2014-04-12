@@ -19,6 +19,7 @@ en:
     new: "Order"
     created: "Order created"
     cost: "Trip cost: "
+    name: "Name"
     phone: "Phone"
     quantity: "Quantity"
     email: "EMail"
@@ -28,3 +29,7 @@ en:
     one_day: "Nearest one day trips"
     many_day: "Nearest many day trips"
     foreign: "Nearest foreign trips"
+  date:
+    formats:
+      badge_day_month: "%-d %b"
+      badge_day: "%-d"

@@ -1,5 +1,6 @@
 <%= bootstrap_form_for(@order) do |f| %>
   <%= f.hidden_field :schedule_id, value: @schedule.id %>
+  <%= f.text_field :name, label: t("order.name") %>
   <%= f.number_field :quantity, value: 1, label: t("order.quantity") %>
   <%= f.phone_field :phone, label: t("order.phone") %>
   <%= f.email_field :email, label: t("order.email") %>
